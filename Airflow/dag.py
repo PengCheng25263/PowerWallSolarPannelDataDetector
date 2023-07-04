@@ -24,7 +24,7 @@ default_args = {
 # so here's a trade-off
 http = urllib3.PoolManager()
 # define url path to call api: get all the sites
-url1 = 'https://te-data-test.herokuapp.com/api/sites?token=1806b4f1563d83d2ce538d72a9db86a0'
+url1 = 'https://te-data-test.herokuapp.com/api/sites?token=???'
 req1 = http.request('GET', url1)
 # transform data format
 j1 = json5.loads(req1.data.decode('utf-8'))
@@ -43,7 +43,7 @@ tmp_SITE_SM_siteInstPower = [df1['timestamp'][1]]
 tmp_SITE_SM_solarInstPower = [df1['timestamp'][1]]
 
 for site in sites:
-    url2 = 'https://te-data-test.herokuapp.com/api/signals?token=1806b4f1563d83d2ce538d72a9db86a0&site=' + str(site)
+    url2 = 'https://te-data-test.herokuapp.com/api/signals?token=???&site=' + str(site)
     req2 = http.request('GET', url2)
     j2 = json5.loads(req2.data.decode('utf-8'))
     df2 = pd.DataFrame(data = j2)
