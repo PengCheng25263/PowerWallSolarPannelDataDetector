@@ -1,2 +1,2 @@
-# TestPowerWallDataDetector
+# PowerWallDataDetector
 A solution to detect abnormal PowerWall Data
